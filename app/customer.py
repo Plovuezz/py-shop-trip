@@ -69,7 +69,7 @@ class Customer:
             purchase = round(product_cost[product][0]
                              * product_cost[product][1], 1)
             if purchase == 3.0:
-                purchase = f'{round(purchase, 1)}'.rstrip("0").rstrip(".")
+                purchase = f"{round(purchase, 1)}".rstrip("0").rstrip(".")
             print(f"{product_cost[product][0]}"
                   f" {product}s "
                   f"for {purchase}"
