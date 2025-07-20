@@ -37,11 +37,11 @@ class Customer:
 
         fuel_cost = self.car.fuel_consumption * distance_km / 100 * fuel_price
 
-        product_cost = sum([
+        product_cost = sum(
             shop.products[product] * self.product_cart[product]
             for product in self.product_cart
             if product in shop.products
-        ])
+        )
 
         cost = fuel_cost + product_cost + fuel_cost
 
@@ -56,11 +56,11 @@ class Customer:
             for product in self.product_cart
             if product in shop.products
         }
-        total = sum([
+        total = sum(
             shop.products[product] * self.product_cart[product]
             for product in self.product_cart
             if product in shop.products
-        ])
+        )
 
         print(f"Date: {current_date}")
         print(f"Thanks, {self.name}, for your purchase!")
