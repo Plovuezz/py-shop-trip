@@ -29,8 +29,10 @@ def shop_trip() -> None:
         customer.buy_products(shop_to_go)
 
         print(f"{customer.name} rides home")
-        amount_left = round(customer.money - minimal_cost, 2)
-        print(f"{customer.name} now has {amount_left} dollars", end="\n\n")
+
+        customer.change_wallet(minimal_cost)
+        print(f"{customer.name} now has "
+              f"{round(customer.money, 2)} dollars", end="\n\n")
 
 
 if __name__ == "__main__":

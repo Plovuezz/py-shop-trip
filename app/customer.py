@@ -77,6 +77,9 @@ class Customer:
         print(f"Total cost is {total} dollars")
         print("See you again!", end="\n\n")
 
+    def change_wallet(self, cost_of_trip: int | float) -> None:
+        self.money -= cost_of_trip
+
 
 def get_data_from_json(filename: str) -> dict:
     with open(filename, "r") as json_file:
